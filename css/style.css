@@ -183,12 +183,15 @@ header {
 }
 
 .reseau .shop-button {
+    width: auto;
     background-color: transparent;
 }
 .reseau .discord-button {
+    width: auto;
     background-color: transparent;
 }
 .reseau .youtube-button {
+    width: auto;
     background-color: transparent;
 }
 
