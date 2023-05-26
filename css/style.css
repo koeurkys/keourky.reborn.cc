@@ -151,6 +151,25 @@ header {
 .dropdown-content a:hover {
     background-color: rgba(255, 255, 255, 0.03);
 }
+
+.welcome {
+    display: flex;
+    font-size: 50px;
+}
+
+.welcome p {
+    margin: 0px 10px;
+}
+
+.welcome.active {
+    display: none;
+}
+
+
+.contact-id.active {
+    margin-top: 152px;
+}
+
 .reseau {
     display: flex;
     align-items: center;
@@ -643,6 +662,12 @@ header {
 }
 
 @media screen and (max-width: 766px) {
+    .welcome {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
     .container-product {
         justify-content: center;
     }
@@ -681,6 +706,12 @@ header {
 
     .open-menu.close {
         display: none;
+    }
+
+    .user {
+        position: absolute;
+        right: 15%;
+        display: flex;
     }
 }
 
