@@ -71,8 +71,7 @@ header {
 .menu {
     padding: 15px;
     backdrop-filter: blur(40px);
-    box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.1);
-    width: 1010px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 255, 255, 0.5);    width: 1010px;
     border: 1px solid #fff;
     border-radius: 10px;
     display: flex;
