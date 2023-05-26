@@ -29,6 +29,30 @@ btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
 });
 
+const dropbtn = document.querySelector('.dropbtn');
+const closeMenu = document.querySelector('.close-menu');
+const openMenu = document.querySelector('.open-menu');
+const dropdown = document.querySelector('dropdown');
+const dropdownContent = document.querySelector('.dropdown-content');
+
+openMenu.addEventListener('click', ()=> {
+    dropdownContent.classList.add('active');
+});
+
+closeMenu.addEventListener('click', ()=> {
+    dropdownContent.classList.remove('active');
+});
+
+openMenu.addEventListener('click', ()=> {
+    closeMenu.classList.add('close');
+    openMenu.classList.add('close');
+});
+
+closeMenu.addEventListener('click', ()=> {
+    closeMenu.classList.remove('close');
+    openMenu.classList.remove('close');
+});
+
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup');
 });
