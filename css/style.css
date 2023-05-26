@@ -557,27 +557,52 @@ header {
 }    
 
 /* Reviews */
+.container-global-reviews {
+    width: 425px;
+    align-items: center;
+    display: flex;
+}
+
+.diapo {
+    position: relative;
+    overflow: hidden;
+}
 
 .global-reviews {
-    width: 1010px;
-    align-items: center;
-    justify-content: center;
     display: flex;
-    flex-direction: row;
 }
 
 .reviews {
+    flex: 1 0 300px;
     margin: 10px;
     display: flex;
     flex-direction: column;
     background-color: transparent;
     border: 2px solid rgba(162, 0, 255, 0.5);
     backdrop-filter: blur(20px);
-    width: 300px;
     height: 225px;
     padding: 20px;
     border-radius: 10px;
 }
+
+
+
+.arrow ion-icon {
+    font-size: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+.skip-left ion-icon:hover {
+    transform: translateX(-5px);
+    color: #bebebe;
+    transition: all .5s ease;
+}
+.skip-right ion-icon:hover {
+    transform: translateX(5px);
+    color: #bebebe;
+    transition: all .5s ease;
+}
+
 
 .right-bottom-box-reviews ion-icon {
     color: #3482E1;
@@ -624,7 +649,6 @@ header {
 
     .global-reviews {
         width: 100%;
-        flex-direction: column;
     }
 
     .container-product {
@@ -679,11 +703,11 @@ header {
     }
 
     .product {
-        width: 140px;
+        width: 160px;
     }
 
     .product .overlay {
-        font-size: 11px;
+        font-size: 12px;
     }
     .container-box {
         width: 100%;
