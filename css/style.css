@@ -671,6 +671,15 @@ header {
     .container-product {
         justify-content: center;
     }
+
+    .container-product img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product {
+        width: 200px;
+    }
     .container-box {
         width: 100%;
         align-items: center;
