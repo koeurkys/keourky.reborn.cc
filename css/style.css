@@ -2,7 +2,45 @@
     
 } */
 
+
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@keyframes animatedgradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 
 * {
     margin: 0;
@@ -10,11 +48,11 @@
     box-sizing: border-box;
     font-family: 'Poppins' , sans-serif;
     
-}
+}    
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
     align-items: center;
     background-color: #333;
     color: #f9f9f9;
@@ -70,9 +108,8 @@ header {
 
 .menu {
     padding: 15px;
-    backdrop-filter: blur(40px);
-    box-shadow: 0px 8px 16px 0px rgba(0, 255, 255, 0.5);    width: 1010px;
-    border: 1px solid #fff;
+
+    width: 1010px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
@@ -679,7 +716,7 @@ header {
     .product {
         width: 160px;
     }
-    
+
     .product .overlay {
         font-size: 12px;
     }
