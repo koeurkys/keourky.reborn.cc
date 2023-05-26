@@ -29,18 +29,29 @@ btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup');
 });
 
+iconClose.addEventListener('click', ()=> {
+    wrapper.classList.remove('active-popup');
+});
+
+
 const dropbtn = document.querySelector('.dropbtn');
 const closeMenu = document.querySelector('.close-menu');
 const openMenu = document.querySelector('.open-menu');
-const dropdown = document.querySelector('dropdown');
+const dropdown = document.querySelector('.dropdown');
 const dropdownContent = document.querySelector('.dropdown-content');
+const welcome = document.querySelector('.welcome');
+const contact = document.querySelector('.contact-id');
 
 openMenu.addEventListener('click', ()=> {
     dropdownContent.classList.add('active');
+    welcome.classList.add('active');
+    contact.classList.add('active');
 });
 
 closeMenu.addEventListener('click', ()=> {
     dropdownContent.classList.remove('active');
+    welcome.classList.remove('active');
+    contact.classList.remove('active');
 });
 
 openMenu.addEventListener('click', ()=> {
@@ -52,10 +63,5 @@ closeMenu.addEventListener('click', ()=> {
     closeMenu.classList.remove('close');
     openMenu.classList.remove('close');
 });
-
-iconClose.addEventListener('click', ()=> {
-    wrapper.classList.remove('active-popup');
-});
-
 
 
