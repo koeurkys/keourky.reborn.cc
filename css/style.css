@@ -667,14 +667,15 @@ header {
         display: none;
     }
     
-    .dropdown:hover .dropdown-content {
+    .dropdown-content.active {
+        display: block;
+    }
+    .close-menu.close {
         display: block;
     }
 
-    .user {
-        position: absolute;
-        right: 15%;
-        display: flex;
+    .open-menu.close {
+        display: none;
     }
 }
 
