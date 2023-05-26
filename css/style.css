@@ -680,6 +680,10 @@ header {
     .product {
         width: 160px;
     }
+    
+    .product .overlay {
+        font-size: 12px;
+    }
     .container-box {
         width: 100%;
         align-items: center;
