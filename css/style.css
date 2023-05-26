@@ -84,7 +84,7 @@ header {
     position: absolute;
     width: 1050px;
     height: 800%;
-    background: linear-gradient(#00ccff,#d9ff03, #030003);
+    background: linear-gradient(#0026ff, #030003);
     animation: animate 10s linear infinite;
 }
 
