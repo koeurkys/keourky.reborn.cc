@@ -766,6 +766,7 @@ footer .left-box {
 }    
 
 .left-box p {
+    text-align: center;
     font-size: 14px;
 }    
 .left-box .support {
