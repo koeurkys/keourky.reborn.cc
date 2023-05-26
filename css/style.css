@@ -68,51 +68,13 @@ header {
     display: none;
 }
 
-.animation-box {
-    position: relative;
-    width: 1010px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.animation-box::before {
-    content: '';
-    position: absolute;
-    width: 1050px;
-    height: 800%;
-    background: linear-gradient(#0026ff, #030003);
-    animation: animate 10s linear infinite;
-}
-
-.animation-box::after {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    background: #03071b;
-    border-radius: 16px;
-}
-.animation-box .menu {
-    position: relative;
-    z-index: 10;
-}
-@keyframes animate {
-    0% {
-        transform: rotate(0deg);
-
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
 
 .menu {
     padding: 15px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 8px 16px 0px rgba(0, 255, 255, 0.5);
     width: 1010px;
+    border: 1px solid #fff;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
