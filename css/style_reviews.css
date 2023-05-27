@@ -468,7 +468,12 @@ header {
     .reviews {
         height: 225px;
     }
-
+    .container-box {
+        width: 100%;
+        align-items: center;
+        flex-direction: column;
+    }
+    
     .left-box {
         width: 100%;
     }
