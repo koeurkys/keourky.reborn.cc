@@ -1,0 +1,618 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #333;
+    color: #f9f9f9;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 0;
+    padding: 0;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    color: #00ffc8;
+    background-color: #020410; /* Couleur de fond pour les particules de neige */
+    z-index: -1;
+    filter: blur(3px);
+}
+
+
+header {
+    width: 1010px;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.dark-mode {
+    background-color: #333;
+    color: #f9f9f9;
+}
+
+.btn-toggle {
+    background-color: transparent;
+    color: #f9f9f9;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.dropdown {
+    display: none;
+    position: relative;
+}
+
+.close-menu {
+    display: none;
+}
+
+
+.menu {
+    padding: 15px;
+    backdrop-filter: blur(40px);
+    box-shadow: 0px 8px 16px 0px rgba(0, 255, 255, 0.5);
+    width: 1010px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-items {
+    text-decoration: none;
+    color: #fff;
+    padding: 8px;
+    margin-right: 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: .5s;
+
+}
+
+.menu-items:hover {
+    color: #3482E1;
+}
+
+.menu-items.principal {
+    color: #3482E1;
+}
+
+.dropdown-content a.principal-sous {
+    background-color: rgba(255, 255, 255, 0.08)
+}
+
+.user {
+    width: auto;
+    border-radius: 500px;
+    padding: 0;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 25px;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #fff;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.dropbtn ion-icon {
+    font-size: 30px;
+}
+
+.dropdown-content {
+    position: absolute;
+    display: none;
+    border: 1px solid #fff;
+    min-width: 160px;
+    box-shadow: 0px 8px 18px 0px rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    z-index: 1;
+    top: 75px;
+    right: 0;
+}
+
+.dropdown-content a {
+    width: 100%;
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: rgba(255, 255, 255, 0.03);
+}
+.reference-id {
+    width: 100%;
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+}
+
+/* login */
+
+.center {
+    position: fixed;/*problème avec affichage formulaire*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    z-index: -2;
+    transition: z-index .7s ease;
+
+}
+
+.center.active {
+    z-index: 1;
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-sizing: 0 0 30px rgba(0, 0, 0, .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+
+.wrapper.active-popup {
+    transform: scale(1);
+
+}
+
+.wrapper.active {
+    height: 450px;
+}
+
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform:  translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+}
+
+.wrapper.active .form-box.register {
+    transition: transform .18s ease;
+    transform: translateX(0);
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color: #f9f9f9;
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #f9f9f9;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.input-box input:focus~label,.input-box input:valid~label {
+    top: -5px;
+
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #f9f9f9;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+
+
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #f9f9f9;
+    line-height: 57px;
+
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color: #f9f9f9;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.remember-forgot label input {
+    accent-color: #162938;
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+    transition: .2s;
+}
+
+.btn:hover {
+    border: 2px solid #fff;
+}
+
+.login-register {
+    font-size: .9em;
+    color: #f9f9f9;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+
+.login-register p a {
+    color: #f9f9f9;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* produit */
+
+
+/* Reviews */
+.container-global-reviews {
+    width: 1010px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.diapo {
+    justify-content: center;
+    width: 100%;
+}
+
+.global-reviews {
+    justify-content: center;
+    display: flex;
+}
+
+.reviews {
+    width: 300px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    border: 2px solid rgba(162, 0, 255, 0.5);
+    backdrop-filter: blur(20px);
+    height: 225px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+
+
+.arrow ion-icon {
+    font-size: 50px;
+    cursor: pointer;
+    transition: .5s;
+}
+.skip-left ion-icon:hover {
+    transform: translateX(-5px);
+    color: #bebebe;
+    transition: all .5s ease;
+}
+.skip-right ion-icon:hover {
+    transform: translateX(5px);
+    color: #bebebe;
+    transition: all .5s ease;
+}
+
+
+.right-bottom-box-reviews ion-icon {
+    color: #3482E1;
+}
+.space-bar {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: #276bbd;
+}
+.bottom {
+    display: flex;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1025px) {
+
+    #particles-js {
+        width: 100%;
+        filter: blur(8px);
+    }
+
+    header {
+        width: 100%;
+    }
+    .menu {
+        width: 80%;
+    }
+    .reference-id {
+        width: 100%;
+    }
+    .container-global-reviews {
+        width: 100%;
+    }
+    .diapo {
+        width: 80%;
+    }
+
+    .global-reviews {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .reviews {
+        width: 100%;
+        height: 150px;
+    }
+
+    footer {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 766px) {
+    .reviews {
+        height: 225px;
+    }
+
+    .left-box {
+        width: 100%;
+    }
+    .container-right, .right-box, .right-right-box, .fin-box, .right-right-box, .logo-footer, a {
+        width: 0;
+        display: none;
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .dropdown {
+        display: block;
+    }
+
+
+    .dropdown-content {
+        display: none;
+    }
+    
+    .dropdown-content.active {
+        display: block;
+    }
+    .close-menu.close {
+        display: block;
+    }
+
+    .open-menu.close {
+        display: none;
+    }
+
+    .user {
+        position: absolute;
+        right: 15%;
+        display: flex;
+    }
+}
+@media screen and (max-width: 0px) {
+    .reviews {
+        height: 225px;
+    }
+}
+
+
+/* Footer */
+
+footer {
+
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}    
+.container-box {
+
+    width: 1025px;
+    position: relative;
+    padding: 20px;
+    margin: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(40px);
+    border-radius: 20px;
+    border: 1px solid rgba(0, 162, 255, 0.5);
+    box-shadow: 0px 8px 18px 0px rgba(255, 255, 255, 0.2);
+
+}    
+
+
+/* Partie left footer */
+
+footer .left-box {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}    
+
+.left-box img {
+    border-radius: 5px;
+}    
+
+.left-box p {
+    text-align: center;
+    font-size: 14px;
+}    
+.left-box .support {
+    font-size: 13px;
+}    
+
+.left-box h4 {
+    font-size: 13px;
+}    
+
+
+
+/* Partie right footer */
+footer .container-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+}
+footer .right-box {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.right-box .right-left-box, .fin-box {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.right-box .right-left-box a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+}
+
+.right-box .right-left-box a:hover {
+    text-decoration: none;
+    transition: .3s;
+    color: #345574;
+}
+
+.right-box .right-right-box li a {
+    font-size: 13px;
+    color: #fff;
+}
+.right-box .right-right-box li {
+    list-style: none;
+}
+
+.container-right .logo-footer {
+    display: flex;
+    justify-content: right;
+}
+
+.container-right .logo-footer a {
+    text-decoration: none;
+    color: #fff;
+    transition: color .5s ease;
+}
+
+.container-right .logo-footer:hover a {
+    color: #263e53;
+}
