@@ -1,7 +1,117 @@
+/* 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+
 /* @media screen and(max-width: 500px) {
     
-} */
+} 
 
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins' , sans-serif;
+    
+}
+
+.big-container {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    color: #f9f9f9;
+    transition: background-color 0.5s, color 0.5s;
+    margin: 0;
+    padding: 0;
+}
+#particles-js {
+    display: none;
+}
+
+.container-rings {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ring {
+    width: 200px;
+    height: 200px;
+    border: 0px solid #000;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.ring:nth-child(1) {
+    border-bottom-width: 8px;
+    border-color:rgb(255, 0, 255);
+    animation: rotate1 2s linear infinite;
+}
+.ring:nth-child(2) {
+    border-right-width: 8px;
+    border-color:rgb(0, 247, 255);
+    animation: rotate2 2s linear infinite;
+}
+.ring:nth-child(3) {
+    border-top-width: 8px;
+    border-color:rgb(0, 255, 13);
+    animation: rotate3 2s linear infinite;
+}
+
+.loading {
+    color: #fff;
+}
+
+@keyframes rotate1 {
+    0% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(-45deg) rotateZ(360deg);
+    }
+}
+@keyframes rotate2 {
+    0% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(50deg) rotateY(10deg) rotateZ(360deg);
+    }
+}
+@keyframes rotate3 {
+    0% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(35deg) rotateY(55deg) rotateZ(360deg);
+    }
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #011015;
+
+
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    color: #00ffc8;
+    background-color: #020410;
+    z-index: -1;
+    filter: blur(3px);
+}
+*/
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
@@ -617,6 +727,32 @@ header {
     display: flex;
     font-size: 12px;
 }
+
+.view-reviews button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 45px;
+    background: #01020C;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 200;
+    transition: .2s;
+    padding-right: 15px;
+    padding-left: 15px;
+    transition: background-color 0.5s ease;
+}    
+.view-reviews ion-icon {
+    font-size: 26px;
+}    
+.view-reviews button:hover {
+    background-color: #2b2828;
+} 
 
 @media screen and (max-width: 1025px) {
 
