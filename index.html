@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logo.png" type="image/x-icon">
     <title>Reborn.cc</title>
     <div id="particles-js"></div>
 
@@ -47,7 +48,7 @@
 <body class="body">
     <header class="header">
         <div class="menu">
-            <button class="btn-toggle" onclick="toggleTheme()"><ion-icon name="moon"></ion-icon></button>
+            <button class="btn-toggle"><img src="img/logo.png" class="logo-menu"></button>
             <a class="menu-items principal" href="#">Home</a>
             <a class="menu-items" href="products.html">Products</a>
             <a class="menu-items" href="reviews.html">Reviews</a>
@@ -252,15 +253,15 @@
     
             <div class="form-box login">
                 <h2>Login</h2>
-                <form action="#">
+                <form action="#"><!--action="traitement_login.php" method="POST"-->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input type="email" name="email-login" id="email-login" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="password-login" id="password-login" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
@@ -276,20 +277,20 @@
             
             <div class="form-box register">
                 <h2>Registration</h2>
-                <form action="#">
+                <form action="#"><!--action="traitement_register.php" method="POST"-->
                     <div class="input-box">
                         <span class="icon"><ion-icon name="person"></ion-icon></span>
-                        <input type="text" required>
+                        <input type="text" name="name-register" id="name-register" required>
                         <label>Username</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="mail"></ion-icon></span>
-                        <input type="email" required>
+                        <input type="email" name="email-register" id="email-register" required>
                         <label>Email</label>
                     </div>
                     <div class="input-box">
                         <span class="icon"><ion-icon name="lock"></ion-icon></span>
-                        <input type="password" required>
+                        <input type="password" name="password-register" id="password-register" required>
                         <label>Password</label>
                     </div>
                     <div class="remember-forgot">
@@ -308,7 +309,7 @@
         <div class="container-box">
 
             <div class="left-box">
-                <img src="img/patch tavini huiraatira.PNG" width="80px" alt="">
+                <img src="img/logo.png" width="80px" alt="">
                 <br>
                 <p>
                     UNLEASH YOUR DOMINANCE, RISE ABOVE THE REST ! THE ULTIMATE CHEATS FOR ULTIMATE VICTORIES !
@@ -319,7 +320,7 @@
                 </p>
                 <br><br>
                 <h4>
-                    Reborn - ©copyright 2023-2024 created by Koeurky
+                    Reborn - ©copyright 2023-2024
                 </h4>
             </div>
             <div class="container-right">
@@ -350,7 +351,23 @@
             </div>
         </div>
     </footer>
+    <script>
+        // récupération donnée formulaire
 
+        var formulaire = document.getElementById('form-login');
+
+        formulaire.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var emailValueLogin = document.getElementById('email-login').value;
+            var passwordValueLogin = document.getElementById('password-login').value;
+
+            console.log("Email : " + emailValueLogin);
+            console.log("Mot de passe : " + passwordValueLogin);
+            
+        });
+
+    </script>
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
     <script src="java/script.js" defer></script>
 </body>
