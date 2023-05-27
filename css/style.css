@@ -152,6 +152,10 @@ header {
     justify-content: center;
 
 }
+.logo-menu {
+    width: 40px;
+    border-radius: 50px;
+}
 
 .dark-mode {
     background-color: #333;
@@ -923,7 +927,7 @@ footer .left-box {
 }    
 
 .left-box img {
-    border-radius: 5px;
+    border-radius: 50px;
 }    
 
 .left-box p {
