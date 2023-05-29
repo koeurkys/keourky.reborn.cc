@@ -569,7 +569,10 @@ footer .left-box {
 .left-box h4 {
     font-size: 13px;
 }    
-
+.left-box .link-tahiticreate {
+    display: flex;
+    color: #fff;
+}
 
 
 /* Partie right footer */
